@@ -31,9 +31,7 @@ public class ShepherdResource {
     public String getStatus() {
         SheepStatusesDto sheepStatuses = service.getSheepStatusses();
         return String.format("Balance: %d, number of sheep healthy and dead: [%d, %d]",
-                getBalance(),
-                sheepStatuses.getNumberOfHealthySheep(),
-                sheepStatuses.getNumberOfDeadSheep());
+                getBalance(), sheepStatuses.getNumberOfHealthySheep(), sheepStatuses.getNumberOfDeadSheep());
     }
 
     @POST

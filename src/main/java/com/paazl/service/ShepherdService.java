@@ -47,6 +47,7 @@ public class ShepherdService {
     public String orderNewSheep(int nofSheepDesired) {
         // TODO Implement sheep ordering feature
     	// TODO Write unit tests
+        if(nofSheepDesired < 1) throw new IllegalArgumentException("Parameter nofSheepDesired cannot be lower than 1");
         int maxPossibleSheepNumber = getBalance().divide(BigInteger.valueOf(priceOfSheep)).intValue();
         if(maxPossibleSheepNumber >= nofSheepDesired){
             currentBalanceRepository.save(
