@@ -12,7 +12,7 @@ import java.math.BigInteger;
 @Path("/shepherdmanager")
 @Service
 public class ShepherdResource {
-    ShepherdService service;
+    private ShepherdService service;
 
     @Autowired
     public ShepherdResource(ShepherdService service) {

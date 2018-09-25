@@ -22,13 +22,11 @@ import static org.mockito.Mockito.when;
 public class ShepherdServiceTests {
 
     @MockBean
-    private SheepRepository sheepRepository;
-    @MockBean
     private CurrentBalanceRepository currentBalanceRepository;
     @Autowired
     private ShepherdService shepherdService;
     @Value("${price_of_new_sheep}")
-    Integer priceOfSheep;
+    private Integer priceOfSheep;
 
     @Test
     public void OrderNewSheep_HaveEnoughMoneyOnBalance_StringMessageReturns(){
